@@ -211,6 +211,9 @@ app.post("/loggingin", async (req, res) => {
 });
 
 app.get("/members", (req, res) => {
+  if (!req.session.authenticated) {
+    res.redirect("/");
+  }
   const images = ["what.gif", "sup.gif", "again.gif"];
   const randomImage = images[Math.floor(Math.random() * images.length)];
 
