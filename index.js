@@ -13,7 +13,7 @@ const app = express();
 
 const Joi = require("joi");
 
-const expireTime = 60 * 60 * 1000;
+const expireTime = 1 * 60 * 60 * 1000;
 
 /* secret information section */
 const mongodb_host = process.env.MONGODB_HOST;
@@ -178,7 +178,7 @@ app.post("/loggingin", async (req, res) => {
     res.send(
       `${validationResult.error.message}<br>
       <br>
-      <a href="/signup">Try again</a>`
+      <a href="/login">Try again</a>`
     );
     return;
   }
