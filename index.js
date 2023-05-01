@@ -7,7 +7,7 @@ const MongoStore = require("connect-mongo");
 const bcrypt = require("bcrypt");
 const saltRounds = 12;
 
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 8080;
 
 const app = express();
 
