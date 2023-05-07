@@ -1,0 +1,21 @@
+<%- include("templates/header") %>
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-7 text-body-emphasis" style="padding-bottom: 50px">
+    Hello, <%= username %>!
+  </h1>
+  <div class="col-lg-6 mx-auto">
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <form action="/members" method="get">
+        <button type="submit" class="btn btn-primary btn-sm px-4 gap-3">
+          Go to Members Ares
+        </button>
+      </form>
+      <form action="/logout" method="get">
+        <button type="submit" class="btn btn-secondary btn-sm px-4">
+          Logout
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include("templates/footer") %>

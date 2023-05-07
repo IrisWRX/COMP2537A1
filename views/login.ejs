@@ -1,0 +1,32 @@
+<%- include("templates/header") %>
+<main class="form-signin w-100 m-auto text-center">
+  <div class="d-flex gap-2 justify-content-center py-5">
+    <form action="/loggingin" method="post">
+      <h1 class="h3 mb-3 fw-normal mb-4">Please sign in</h1>
+      <div class="form-floating">
+        <input
+          type="email"
+          name="email"
+          class="form-control"
+          id="floatingInput"
+          placeholder="Email"
+        />
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="password"
+          name="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Password"
+        />
+        <label for="floatingPassword">Password</label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary mt-4" type="submit">
+        Sign in
+      </button>
+    </form>
+  </div>
+</main>
+<%- include("templates/footer") %>
